@@ -1,0 +1,109 @@
+body {
+  font-family: Helvetica;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas: 
+    "header header"
+    "side main"
+  ;
+}
+
+.header {
+  background-color: #fff;
+  grid-area: header;
+  display: flex;
+  align-items: center;
+
+}
+
+.sidebar {
+  background-color: #1c1f23;
+  grid-area: side;
+}
+.main {
+  background-color: #c3c5ca;
+  grid-area: main;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 160px 1fr 1fr;
+  grid-template-areas: 
+  "c1 c2 c3"
+  "c4 c4 c4"
+  "c4 c4 c4";
+  gap: 20px;
+}
+
+.card {
+  background-color: #f6f7f9;
+  border-radius: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 5px;
+  
+}
+
+.card:nth-child(1) {
+  grid-area: c1;
+}
+.src-doc {
+  margin: 5px;
+}
+
+
+.card:nth-child(2) {
+  grid-area: c2;
+}
+.card:nth-child(3) {
+  grid-area: c3;
+}
+.card:nth-child(4) {
+  grid-area: c4;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center; 
+  flex-wrap: wrap;
+  gap: 0.5cm; 
+  margin-top: 20px;
+  box-sizing: border-box;
+  
+
+}
+.item {
+  border-radius: 5px;
+  text-align: center;
+}
+.item-1 {
+ flex-grow: 1;
+}
+button {
+  background-color:#fff;
+  font-weight: bold;
+  color:#1c1f23;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: solid;
+  transition: background-color 0.15s, color 0.15s;
+}
+button:hover {
+  color:#fff;
+  background-color:#1c1f23;
+}
+button:active{
+  opacity: 0.7;
+}
+
+.sub-card1 {
+  flex-direction: row;
+  align-items: end;
+  margin-top: 20px;
+}

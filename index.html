@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Dashboard layouts with CSS grid</title>
+</head>
+<body>
+
+  <header class="header" style="text-align: center;"> 
+    <h1> Document Tracker System </h1>
+    <div class="login">
+      
+    </div>
+  </header>
+      
+  <section class="sidebar"> 
+    
+    <div class="container">
+      <div class="item item-1"> 
+        <button style="width: 124.2px"> Profile </button>
+      </div>
+      <div class="item item-2"> 
+        <button style="width: 124.2px;"> File Uploads </button>
+      </div>
+      <div class="item item-3">
+        <button> User Activity </button>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <main class="main">
+
+    <div class="card">
+      <h5 class="src-doc"> Search Document </h5>
+      <input type="textbox">
+      <p style="margin: 1px; font-size: 10px; font-style: italic; "> Enter Keyword </p>
+      <div class="sub-card1">  
+        <button> Search </button>
+        <button> Clear </button>
+        <button> Update </button>
+        <button> Delete </button>
+      </div>
+    </div>
+
+    <div class="card"> 
+      <h5 class="src-doc"> Import Documents </h5>
+      <input type="textbox">
+      <p style="margin: 1px; font-size: 10px; font-style: italic; "> 
+        .docx/.xlsx/.pdf
+      </p>
+      <div class="sub-card1">  
+        <button> Open Local Folder </button>
+        <button> Import </button>
+      </div> 
+    </div>
+
+    <div class="card">
+      <h5 class="src-doc"> Export Documents </h5>
+      <input type="textbox">
+      <p style="margin: 1px; font-size: 10px; font-style: italic; "> 
+        Enter Keyword 
+      </p>
+      <div class="sub-card1">  
+        <button> Search File </button>
+        <button> Export </button>
+      </div> 
+    </div>  
+
+
+    <div class="card"></div>  
+    
+  </main>
+  
+</body>
+</html>
