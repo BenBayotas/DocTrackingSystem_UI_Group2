@@ -18,61 +18,51 @@
   <section class="sidebar"> 
     
     <div class="container">
-      <div class="item item-1"> 
-        <button style="width: 124.2px"> Profile </button>
-      </div>
-      <div class="item item-2"> 
-        <button style="width: 124.2px;"> File Uploads </button>
-      </div>
-      <div class="item item-3">
-        <button> User Activity </button>
-      </div>
-      <div class="item item-4"> 
-        <button style="width: 124.2px;"> Settings </button>
-      </div>
+      <form action="index.html">
+        <input type="submit" name="clear" class="btn side-btn" value="Profile"> <br>
+        <input type="submit" name="clear" class="btn side-btn" value="File Uploads"> <br>
+        <input type="submit" name="update" class="btn side-btn" value="User Activity"> <br>
+        <input type="submit" name="delete" class="btn side-btn" value="Settings"> <br>
+      </form>
 
     </div>
-
   </section>
-
-
 
   <main class="main">
 
     <div class="card">
-      <h5 class="src-doc"> Search Document </h5>
-      <input type="textbox">
-      <p style="margin: 1px; font-size: 10px; font-style: italic; "> Enter Keyword </p>
-      <div class="sub-card1">  
-        <button> Search </button>
-        <button> Clear </button>
-        <button> Update </button>
-        <button> Delete </button>
-      </div>
+
+      <form action="index.html">
+        <h5 style="margin: 5px;"> Search Documents </h5>
+        <input type="text" name="src-bar" class="txt-bar" size="50px"> <br>
+        <input type="submit" name="searcg" class="btn" value="Search"> 
+        <input type="submit" name="clear" class="btn" value="Clear">
+        <input type="submit" name="update" class="btn" value="Update">
+        <input type="submit" name="delete" class="btn" value="Delete"> 
+      </form>
+
     </div>
 
     <div class="card"> 
-      <h5 class="src-doc"> Import Documents </h5>
-      <input type="textbox">
-      <p style="margin: 1px; font-size: 10px; font-style: italic; "> 
-        .docx/.xlsx/.pdf
-      </p>
-      <div class="sub-card1">  
-        <button> Open Local Folder </button>
-        <button> Import </button>
-      </div> 
+
+      <form action="index.html">
+        <h5 style="margin: 5px;"> Import Documents </h5>
+        <input type="text" name="src" class="txtbar" size="50px"> <br>
+        <input type="submit" name="opn-btn" class="btn" value="Open Folder"> 
+        <input type="submit" name="import" class="btn" value="Import">
+      </form>
     </div>
 
     <div class="card">
-      <h5 class="src-doc"> Export Documents </h5>
-      <input type="textbox">
-      <p style="margin: 1px; font-size: 10px; font-style: italic; "> 
-        Enter Keyword 
-      </p>
-      <div class="sub-card1">  
-        <button> Search File </button>
-        <button> Export </button>
-      </div> 
+
+      <form action="index.html">
+        <h5 style="margin: 5px;"> Export Documents </h5>
+        <input type="text" name="src" class="txtbar" size="50px"> <br>
+        <input type="submit" name="srcfolder" class="btn" value="Search File"> 
+        <input type="submit" name="export" class="btn" value="Export">
+        
+      </form>
+
     </div>  
 
 
