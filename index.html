@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
   <title>Dashboard layouts with CSS grid</title>
 </head>
@@ -17,56 +17,50 @@
       
   <section class="sidebar"> 
     
-    <div class="container">
+    <div class="container-side">
       <form action="index.html">
-        <input type="submit" name="clear" class="btn side-btn" value="Profile"> <br>
-        <input type="submit" name="clear" class="btn side-btn" value="File Uploads"> <br>
-        <input type="submit" name="update" class="btn side-btn" value="User Activity"> <br>
-        <input type="submit" name="delete" class="btn side-btn" value="Settings"> <br>
+        <input type="button" name="clear" class="btn side-btn" value="Profile"> <br>
+        <input type="button" name="clear" class="btn side-btn" value="File Uploads"> <br>
+        <input type="button" name="update" class="btn side-btn" value="User Activity"> <br>
+        <input type="button" name="delete" class="btn side-btn" value="Settings"> <br>
       </form>
-
     </div>
+    
   </section>
 
   <main class="main">
 
     <div class="card">
-
       <form action="index.html">
         <h5 style="margin: 5px;"> Search Documents </h5>
-        <input type="text" name="src-bar" class="txt-bar" size="50px"> <br>
+        <input type="text" name="src-bar" class="txt-bar" size="40px"> <br>
         <input type="submit" name="searcg" class="btn" value="Search"> 
         <input type="submit" name="clear" class="btn" value="Clear">
         <input type="submit" name="update" class="btn" value="Update">
-        <input type="submit" name="delete" class="btn" value="Delete"> 
+        <input type="submit" name="delete" class="btn delete-btn" value="Delete"> 
       </form>
-
     </div>
 
     <div class="card"> 
-
       <form action="index.html">
-        <h5 style="margin: 5px;"> Import Documents </h5>
-        <input type="text" name="src" class="txtbar" size="50px"> <br>
-        <input type="submit" name="opn-btn" class="btn" value="Open Folder"> 
-        <input type="submit" name="import" class="btn" value="Import">
+        <h5 style="margin: 5px;"> Import Documents (.docx/ .xlsx/ .pdf) </h5> 
+        <input type="file" name="file" id="file" class="upload" style="margin-top: 20px;"> 
+        <input type="submit" name="import" class="btn import-btn" value="Import">
       </form>
     </div>
 
     <div class="card">
-
       <form action="index.html">
         <h5 style="margin: 5px;"> Export Documents </h5>
-        <input type="text" name="src" class="txtbar" size="50px"> <br>
+        <input type="text" name="src" class="txtbar" size="40px"> <br>
         <input type="submit" name="srcfolder" class="btn" value="Search File"> 
         <input type="submit" name="export" class="btn" value="Export">
-        
       </form>
 
     </div>  
 
 
-    <div class="tablebg">
+    <div class="card">
       <div class="table">
         <table>
           <tr>
