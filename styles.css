@@ -109,7 +109,10 @@ body {
   padding: 5px;
   gap: 5px;
   padding: 20px;
-  
+  transition: transform 0.15s;
+}
+.card:hover{
+  transform: scale(1.03, 1.03);
 }
 .card:nth-child(1) {
   grid-area: c1;
