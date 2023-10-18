@@ -12,25 +12,73 @@
     <h1> Document Tracker System </h1>
     <div class="login">
       
+      <style>
+        .dropdown button{
+          background-color: aqua;
+          border: none;
+          width: 100px;
+          height: 40px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+        .dropdown .content{
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+          width: 100px;
+          position: absolute;
+          display: none;
+        }
+        .dropdown a {
+          text-decoration: none;
+          color: black;
+          display: block;
+          padding: 10px 15px;
+          font-size: 18px;
+        }
+        .dropdown:hover .content{
+          display: block;
+        }
+        .dropdown .a:hover{
+          background-color:  rgb(198, 8, 8);
+          color: white;
+        }
+        .dropdown .o:hover{
+          background-color:  rgb(198, 8, 8);
+          color: white;
+        }
+        .dropdown .a:hover{
+          background-color:  rgb(8, 198, 27);
+          color: white;
+        }
+        .dropdown{
+          margin-left: 1000px;
+        }
+    </style>
+    
+  
+    <div class="dropdown">
+        <button>Color Mode</button>
+        <div class="content">
+          <a href="" class="a">Light Mode</a>
+          <a href="" class="o">Dark Mode</a>
+    </div>
+    </div>
     </div>
   </header>
       
   <section class="sidebar">
     
     <div class="container-side">
-      <form action="profile.html" target="">
+      <form action="profile.html" target="_blank">
         <button class="btn side-btn">Profile</button>
       </form>
-      <form action="fileuploads.html" target="">
+      <form action="fileuploads.html" target="_blank">
         <button class="btn side-btn">File Uploads</button>
       </form>
-      <form action="useractivity.html" target="">
+      <form action="useractivity.html" target="_blank">
         <button class="btn side-btn">User Activity</button>
       </form>
-      <form action="settings.html" target="">
-        <button class="btn side-btn">Settings</button>
-      </form>
     </div>
+  </div>
     
   </section>
 
