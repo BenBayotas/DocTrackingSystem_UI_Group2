@@ -27,14 +27,14 @@
     </div>
     <ul class="nav-links">
       <li>
-        <a href="index.html">
+        <a href="index.php">
           <i class='bx bx-home-smile' ></i>
           <span class="link_name">Home</span>
         </a>
       </li>
       <li>
         <div class="iocn-link">
-          <a href="fileuploads.html">
+          <a href="fileuploads.php">
             <i class='bx bx-note' ></i>
             <span class="link_name">File Uploads</span>
           </a>
@@ -42,15 +42,15 @@
       </li>
       <li>
         <div class="iocn-link">
-          <a href="profile.html">
+          <a href="profile.php">
             <i class='bx bx-user-circle' ></i>
             <span class="link_name">Profile</span>
           </a>
           <i class='bx bxs-chevron-down arrow' ></i>
         </div>
         <ul class="sub-menu">
-          <li><a class="link_name" href="profile.html">Profile</a></li>
-          <li><a href="useractivity.html">User Activity</a></li>
+          <li><a class="link_name" href="profile.php">Profile</a></li>
+          <li><a href="useractivity.php">User Activity</a></li>
         </ul>
       </li>
       <li>

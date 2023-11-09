@@ -70,7 +70,7 @@
       </div>
       <ul class="nav-links">
         <li>
-          <a href="index.html">
+          <a href="index.php">
             <i class='bx bx-home-smile' ></i>
             <span class="link_name">Home</span>
           </a>
@@ -80,7 +80,7 @@
         </li>
         <li>
           <div class="iocn-link">
-            <a href="fileuploads.html">
+            <a href="fileuploads.php">
               <i class='bx bx-note' ></i>
               <span class="link_name">File Uploads</span>
             </a>
@@ -91,15 +91,15 @@
         </li>
         <li>
           <div class="iocn-link">
-            <a href="profile.html">
+            <a href="profile.php">
               <i class='bx bx-user-circle' ></i>
               <span class="link_name">Profile</span>
             </a>
             <i class='bx bxs-chevron-down arrow' ></i>
           </div>
           <ul class="sub-menu">
-            <li><a class="link_name" href="profile.html">Profile</a></li>
-            <li><a href="useractivity.html">User Activity</a></li>
+            <li><a class="link_name" href="profile.php">Profile</a></li>
+            <li><a href="useractivity.php">User Activity</a></li>
           </ul>
         </li>
         <li>
@@ -127,7 +127,7 @@
   <main class="main">
 
     <div class="card">
-      <form action="index.html">
+      <form action="index.php">
         <h5 style="margin: 5px;"> Search Documents </h5>
         <input type="text" name="src-bar" class="txt-bar" size="40px"> <br>
         <input type="submit" name="searcg" class="btn" value="Search"> 
@@ -136,7 +136,7 @@
     </div>
 
     <div class="card"> 
-      <form action="index.html">
+      <form action="index.php">
         <h5 style="margin: 5px;"> Import Documents (.docx/ .xlsx/ .pdf) </h5> 
         <input type="file" name="file" id="file" class="upload" style="margin-top: 20px;"> 
         <input type="submit" name="import" class="btn import-btn" value="Import">
@@ -144,7 +144,7 @@
     </div>
 
     <div class="card">
-      <form action="index.html">
+      <form action="index.php">
         <h5 style="margin: 5px;"> Export Documents </h5>
         <input type="text" name="src" class="txtbar" size="40px"> <br>
         <input type="submit" name="srcfolder" class="btn" value="Search File"> 
