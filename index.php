@@ -10,52 +10,6 @@
 
   <header class="header" style="text-align: center;"> 
     <p style="font-size: 27px;"> Document Tracker System </p>  
-    <div class="login">
-      
-      <style>
-        .dropdown button{
-          background-color: rgb(255, 255, 255);
-          border: none;
-          width: 100px;
-          height: 40px;
-          font-weight: bold;
-          cursor: pointer;
-        }
-        .dropdown .content{
-          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-          width: 100px;
-          position: absolute;
-          display: none;
-        }
-        .dropdown a {
-          text-decoration: none;
-          color: black;
-          display: block;
-          padding: 10px 15px;
-          font-size: 18px;
-        }
-        .dropdown:hover .content{
-          display: block;
-        }
-        .dropdown .a:hover{
-          background-color:  rgb(198, 8, 8);
-          color: white;
-        }
-        .dropdown .o:hover{
-          background-color:  rgb(198, 8, 8);
-          color: white;
-        }
-        .dropdown .a:hover{
-          background-color:  rgb(8, 198, 27);
-          color: white;
-        }
-        .dropdown{
-          margin-left: 1000px;
-        }
-    </style>
-  
-    
-    </div>
   </header>
 
 <!-- Sidebar-->
