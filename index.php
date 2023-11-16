@@ -144,17 +144,6 @@
     </div>
 
     <div class="card">
-      <form action="index.php">
-        <h5 style="margin: 5px;"> Export Documents </h5>
-        <input type="text" name="src" class="txtbar" size="40px"> <br>
-        <input type="submit" name="srcfolder" class="btn" value="Search File"> 
-        <input type="submit" name="export" class="btn" value="Export">
-      </form>
-
-    </div>  
-
-
-    <div class="card">
       <div class="outer-wrapper">
       <div class="table-wrapper">
       <div class="table">
@@ -172,7 +161,8 @@
             <td>
               <div style=" width: 50%; display: inline-block;">
                 <input type="submit" name="update" class="tablebtn update-btn" value="Update">
-                <input type="submit" name="delete" class="tablebtn delete-btn" value="Delete"> 
+                <input type="submit" name="delete" class="tablebtn delete-btn" value="Delete">
+                <input type="submit" name="export" class="tablebtn export-btn" value="Export">  
               </div>
         
             </td>
@@ -185,7 +175,8 @@
             <td>
               <div style=" width: 50%; display: inline-block;">
                 <input type="submit" name="update" class="tablebtn update-btn" value="Update">
-                <input type="submit" name="delete" class="tablebtn delete-btn" value="Delete"> 
+                <input type="submit" name="delete" class="tablebtn delete-btn" value="Delete">
+                <input type="submit" name="export" class="tablebtn export-btn" value="Export">  
               </div>
         
             </td>
@@ -197,7 +188,8 @@
             <td>
               <div style=" width: 50%; display: inline-block;">
                 <input type="submit" name="update" class="tablebtn update-btn" value="Update">
-                <input type="submit" name="delete" class="tablebtn delete-btn" value="Delete"> 
+                <input type="submit" name="delete" class="tablebtn delete-btn" value="Delete">
+                <input type="submit" name="export" class="tablebtn export-btn" value="Export">
               </div>
         
             </td>
@@ -209,7 +201,8 @@
             <td>
               <div style=" width: 50%; display: inline-block;">
                 <input type="submit" name="update" class="tablebtn update-btn" value="Update">
-                <input type="submit" name="delete" class="tablebtn delete-btn" value="Delete"> 
+                <input type="submit" name="delete" class="tablebtn delete-btn" value="Delete">
+                <input type="submit" name="export" class="tablebtn export-btn" value="Export">  
               </div>
         
             </td>
@@ -221,7 +214,8 @@
             <td>
               <div style=" width: 50%; display: inline-block;">
                 <input type="submit" name="update" class="tablebtn update-btn" value="Update">
-                <input type="submit" name="delete" class="tablebtn delete-btn" value="Delete"> 
+                <input type="submit" name="delete" class="tablebtn delete-btn" value="Delete">
+                <input type="submit" name="export" class="tablebtn export-btn" value="Export">  
               </div>
         
             </td>
@@ -233,8 +227,8 @@
             <td>
               <div style=" width: 50%; display: inline-block;">
                 <input type="submit" name="update" class="tablebtn update-btn" value="Update">
-                <input type="submit" name="delete" class="tablebtn delete-btn" value="Delete"> 
-              </div>
+                <input type="submit" name="delete" class="tablebtn delete-btn" value="Delete">
+                <input type="submit" name="export" class="tablebtn export-btn" value="Export">  
         
             </td>
           </tr>
