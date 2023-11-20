@@ -48,16 +48,6 @@
               <li><a href="useractivity.php">User Activity</a></li>
             </ul>
           </li>
-          <li>
-        <div class="profile-details">
-          <div class="profile-content">
-            <!--<img src="image/profile.jpg" alt="profileImg">-->
-          </div>
-          <div class="sign-out-icon">
-          </div>
-          <i class='bx bx-log-out' ></i>
-        </div>
-      </li>
     </ul>
       </div>
       <section class="home-section">

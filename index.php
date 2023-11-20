@@ -1,3 +1,6 @@
+<?php include 'filesLogic.php';?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,11 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
   <title>Document Tracker System</title>
+  
 </head>
 <body>
 
   <header class="header" style="text-align: center;"> 
-    <p style="font-size: 27px;"> Document Tracker System </p>  
+    <p style="font-size: 27px;"> Document Tracker System </p>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <button class="signout-btn">
+      <i class="bx bx-log-out">
+      </i><a href="auth.php">  Signout </a></button>
   </header>
 
 <!-- Sidebar-->
@@ -56,16 +64,6 @@
             <li><a href="useractivity.php">User Activity</a></li>
           </ul>
         </li>
-        <li>
-          <div class="profile-details">
-            <div class="profile-content">
-              <!--<img src="image/profile.jpg" alt="profileImg">-->
-            </div>
-            <div class="sign-out-icon">
-            </div>
-            <i class='bx bx-log-out' ></i>
-          </div>
-        </li>
       </ul>
     </div>
 
@@ -90,106 +88,44 @@
     </div>
 
     <div class="card"> 
-      <form action="index.php">
-        <h5 style="margin: 5px;"> Import Documents (.docx/ .xlsx/ .pdf) </h5> 
-        <input type="file" name="file" id="file" class="upload" style="margin-top: 20px;"> 
-        <input type="submit" name="import" class="btn import-btn" value="Import">
-      </form>
+      <form action="index.php" method="post" enctype="multipart/form-data" >
+          <h5 style="margin: 5px;"> Import Documents (.docx/ .xlsx/ .pdf) </h5><br>
+          <input type="file" name="myfile"> 
+          <button type="submit" name="save" class="btn import-btn">Import</button>
+        </form>
+
     </div>
 
     <div class="card">
       <div class="outer-wrapper">
       <div class="table-wrapper">
       <div class="table">
-        <table>
-          <tr>
-            <th>File name</th>
-            <th>File size</th>
-            <th>Type of file</th>
-            <th>Actions</th>
-          </tr>
-          <tr>
-            <td>Jhoewell Posas</td>
-            <td>20mb</td>
-            <td>.docs</td>
-            <td>
-              <div style=" width: 50%; display: inline-block;">
-                <input type="submit" name="update" class="tablebtn update-btn" value="Update">
-                <input type="submit" name="delete" class="tablebtn delete-btn" value="Delete">
-                <input type="submit" name="export" class="tablebtn export-btn" value="Export">  
-              </div>
-        
-            </td>
+      <table>
+            <thead>
+                <th>ID</th>
+                <th>File Name</th>
+                <th>File Size</th>
+                <th>Downloads</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+              <?php foreach ($files as $file): ?>
+                <tr>
+                  <td><?php echo $file['id']; ?></td>
+                  <td><?php echo $file['name']; ?></td>
+                  <td><?php echo floor($file['size'] / 1000) . ' KB'; ?></td>
+                  <td><?php echo $file['downloads']; ?></td>
+                  <td style="width: 30%;">
+                      <a class="tablebtn update-btn" href="index.php?file_id=<?php echo $file['id'] ?>">Download</a>
+                      <input type="submit" name="update" class="tablebtn update-btn" value="Update">
+                      <input type="submit" name="delete" class="tablebtn delete-btn" value="Delete"> 
+                  </td>
+                </tr>
+              <?php endforeach;?>
 
-          </tr>
-          <tr>
-            <td>Kentoy Beltran</td>
-            <td>30mb</td>
-            <td>.xlsx</td>
-            <td>
-              <div style=" width: 50%; display: inline-block;">
-                <input type="submit" name="update" class="tablebtn update-btn" value="Update">
-                <input type="submit" name="delete" class="tablebtn delete-btn" value="Delete">
-                <input type="submit" name="export" class="tablebtn export-btn" value="Export">  
-              </div>
-        
-            </td>
-          </tr>
-          <tr>
-            <td>Ondoy Bayotas </td>
-            <td>10mb </td>
-            <td>.pdf </td>
-            <td>
-              <div style=" width: 50%; display: inline-block;">
-                <input type="submit" name="update" class="tablebtn update-btn" value="Update">
-                <input type="submit" name="delete" class="tablebtn delete-btn" value="Delete">
-                <input type="submit" name="export" class="tablebtn export-btn" value="Export">
-              </div>
-        
-            </td>
-          </tr>
-          <tr>
-            <td>Len Tupaz</td>
-            <td>15mb</td>
-            <td>xlsx</td>
-            <td>
-              <div style=" width: 50%; display: inline-block;">
-                <input type="submit" name="update" class="tablebtn update-btn" value="Update">
-                <input type="submit" name="delete" class="tablebtn delete-btn" value="Delete">
-                <input type="submit" name="export" class="tablebtn export-btn" value="Export">  
-              </div>
-        
-            </td>
-          </tr>
-          <tr>
-            <td>Shamic Ebarle</td>
-            <td>5mb</td>
-            <td>.docs</td>
-            <td>
-              <div style=" width: 50%; display: inline-block;">
-                <input type="submit" name="update" class="tablebtn update-btn" value="Update">
-                <input type="submit" name="delete" class="tablebtn delete-btn" value="Delete">
-                <input type="submit" name="export" class="tablebtn export-btn" value="Export">  
-              </div>
-        
-            </td>
-          </tr>
-          <tr>
-            <td>Angelo Sanchez</td>
-            <td>5mb</td>
-            <td>.docs</td>
-            <td>
-              <div style=" width: 50%; display: inline-block;">
-                <input type="submit" name="update" class="tablebtn update-btn" value="Update">
-                <input type="submit" name="delete" class="tablebtn delete-btn" value="Delete">
-                <input type="submit" name="export" class="tablebtn export-btn" value="Export">  
-        
-            </td>
-          </tr>
-          
-          
-          
-        </table>
+            </tbody>
+
+          </table>
       </div>
       
     </div>  

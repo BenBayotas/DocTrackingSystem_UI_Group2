@@ -181,10 +181,10 @@ p {
   transform: translateY(-50%);
 }
 .one {
-  width: 80%;
+  width: 50%;
   margin-left: 10%;
-  background-color: black;
-  height: 400px;
+
+  height: 20px;
 }
 .home-section{
   position: relative;
@@ -228,7 +228,6 @@ p {
   grid-template-rows: auto 1fr 1fr 1fr;
   grid-template-areas: 
   "c1 c2 c3 c4"
-  "c5 c5 c5 c5"
   "c5 c5 c5 c5";
 
 }
@@ -254,6 +253,24 @@ p {
   margin-bottom: 20px;
   box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
 }
+.signout-btn {
+  margin-left: 850px;
+  font-family: Montserrat,sans-serif;
+  font-size: .8em;
+  /*background-image: linear-gradient(#4CAF50, #4CAF50);*/
+  background-color: rgb(238, 238, 238);
+  color:#000000;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 0;
+  transition: background-color 0.15s, color 0.15s, transform 0.15s;
+  padding: 10px 20px;
+}
+.signout-btn:hover{
+  background-color: #2264b0;
+  color:#ffffff;
+  transform: scale(1.1, 1.1);
+}
 .tablebtn {
   font-family: Montserrat,sans-serif;
   font-size: .8em;
@@ -264,8 +281,8 @@ p {
   cursor: pointer;
   border: 0;
   transition: background-color 0.15s, color 0.15s, transform 0.15s;
-  padding: 10px 20px;
-  margin: 10px;
+  padding: 5px 10px;
+  margin: 5px;
 }
 .btn:hover {
   transform: scale(1.1, 1.1);
@@ -329,12 +346,15 @@ p {
 }
 .card:nth-child(3) {
   grid-area: c5;
+  width: 98.5%;
+  height: 90%;
 }
-/* FOOTER 
+
  footer {
   font-size: 10px;
+  height: 10px;
   
- } */
+ } 
 
 
 /*TABLE ELEMENTS (DATABASE TABLE PLACEHOLDER)*/
@@ -382,9 +402,9 @@ p {
 
 
 .table td {
-  border: 1px solid #dddddd;
+  border: 5px solid #dddddd;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
 }
 .table tr:nth-child(even) {
   background-color: #f2f2f2;
