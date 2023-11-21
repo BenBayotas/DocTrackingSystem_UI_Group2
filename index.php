@@ -1,5 +1,8 @@
-<?php include 'filesLogic.php';?>
+<?php 
+include 'filesLogic.php';
+include 'delete.php';
 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -67,7 +70,6 @@
       </ul>
     </div>
 
-    
     <section class="home-section">
       <div class="home-content">
         <i class='bx bx-menu' ></i>
@@ -81,9 +83,10 @@
     <div class="card">
       <form action="index.php">
         <h5 style="margin: 5px;"> Search Documents </h5>
-        <input type="text" name="src-bar" class="txt-bar" size="40px"> <br>
-        <input type="submit" name="searcg" class="btn" value="Search"> 
-        <input type="submit" name="clear" class="btn" value="Clear">
+<!-- Add this inside your search form -->
+<input type="text" name="search" class="txt-bar" size="40px" placeholder="Enter file name...">
+<button type="submit" name="searchBtn" class="btn">Search</button>
+
       </form>
     </div>
 
@@ -109,21 +112,22 @@
                 <th>Action</th>
             </thead>
             <tbody>
-              <?php foreach ($files as $file): ?>
-                <tr>
-                  <td><?php echo $file['id']; ?></td>
-                  <td><?php echo $file['name']; ?></td>
-                  <td><?php echo floor($file['size'] / 1000) . ' KB'; ?></td>
-                  <td><?php echo $file['downloads']; ?></td>
-                  <td style="width: 30%;">
-                      <a class="tablebtn update-btn" href="index.php?file_id=<?php echo $file['id'] ?>">Download</a>
-                      <input type="submit" name="update" class="tablebtn update-btn" value="Update">
-                      <input type="submit" name="delete" class="tablebtn delete-btn" value="Delete"> 
-                  </td>
-                </tr>
-              <?php endforeach;?>
-
-            </tbody>
+   <?php foreach ($files as $file): ?>
+      <tr>
+         <td><?php echo $file['id']; ?></td>
+         <td><?php echo $file['name']; ?></td>
+         <td><?php echo floor($file['size'] / 1000) . ' KB'; ?></td>
+         <td><?php echo $file['downloads']; ?></td>
+         <td style="width: 30%;">
+            <a class="tablebtn update-btn" href="index.php?file_id=<?php echo $file['id'] ?>">Download</a>
+            <form action="index.php" method="post">
+               <input type="hidden" name="file_id" value="<?php echo $file['id']; ?>">
+               <input type="submit" name="delete" class="tablebtn delete-btn" value="Delete">
+            </form>
+         </td>
+      </tr>
+   <?php endforeach;?>
+</tbody>
 
           </table>
       </div>
