@@ -22,10 +22,10 @@ if (isset($_POST['save'])) { // if save button on the form is clicked
     $file = $_FILES['myfile']['tmp_name'];
     $size = $_FILES['myfile']['size'];
 
-    if (!in_array($extension, ['zip', 'pdf', 'docx'])) {
-        header('index.php');
+    if (!in_array($extension, ['xlsx', 'pdf', 'docx'])) {
+        
     } elseif ($_FILES['myfile']['size'] > 1000000) { // file shouldn't be larger than 1Megabyte
-        header('index.php');
+       
     } else {
         // move the uploaded (temporary) file to the specified destination
         if (move_uploaded_file($file, $destination)) {

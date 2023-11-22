@@ -2,6 +2,8 @@
 include 'filesLogic.php';
 include 'delete.php';
 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -118,7 +120,7 @@ include 'delete.php';
          <td><?php echo $file['name']; ?></td>
          <td><?php echo floor($file['size'] / 1000) . ' KB'; ?></td>
          <td><?php echo $file['downloads']; ?></td>
-         <td style="width: 30%;">
+         <td style="width: 20%;" style="display: inline;">
             <a class="tablebtn update-btn" href="index.php?file_id=<?php echo $file['id'] ?>">Download</a>
             <form action="index.php" method="post">
                <input type="hidden" name="file_id" value="<?php echo $file['id']; ?>">
