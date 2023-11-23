@@ -2,7 +2,20 @@
 include 'filesLogic.php';
 include 'delete.php';
 
+if (isset($_POST['searchBtn'])) {
+  $search = $_POST['search'];
+  $query = "SELECT * FROM files WHERE CONCAT(id, name) LIKE '%".$search."%'";
+  $search_result = filterTable($query);
+} else {
+  $query =  "SELECT * FROM files";
+  $search_result = filterTable($query);
+}
 
+function filterTable($query) {
+  $connect = mysqli_connect("localhost", "root", "", "dts");
+  $filter_Result = mysqli_query($connect, $query);
+  return $filter_Result;
+}
 
 ?>
 
@@ -83,11 +96,11 @@ include 'delete.php';
   <main class="main">
 
     <div class="card">
-      <form action="index.php">
+      <form action="index.php" method="post">
         <h5 style="margin: 5px;"> Search Documents </h5>
 <!-- Add this inside your search form -->
-<input type="text" name="search" class="txt-bar" size="40px" placeholder="Enter file name...">
-<button type="submit" name="searchBtn" class="btn">Search</button>
+<input type="text" name="search" class="txt-bar" size="40px" placeholder="Enter file name...">   <br>
+<input type="submit" name="searchBtn" class="btn" value="Search">
 
       </form>
     </div>
@@ -114,7 +127,7 @@ include 'delete.php';
                 <th>Action</th>
             </thead>
             <tbody>
-   <?php foreach ($files as $file): ?>
+   <?php while($file = mysqli_fetch_array($search_result)):?>
       <tr>
          <td><?php echo $file['id']; ?></td>
          <td><?php echo $file['name']; ?></td>
@@ -128,7 +141,7 @@ include 'delete.php';
             </form>
          </td>
       </tr>
-   <?php endforeach;?>
+   <?php endwhile;?>
 </tbody>
 
           </table>
