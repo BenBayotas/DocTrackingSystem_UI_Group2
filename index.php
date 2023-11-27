@@ -30,12 +30,12 @@ function filterTable($query) {
 </head>
 <body>
 
-  <header class="header" style="text-align: center;"> 
-    <p style="font-size: 27px;"> Document Tracker System </p>
+  <header class="header"> 
+    <p> Document Tracker System </p>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <button class="signout-btn">
-      <i class="bx bx-log-out">
-      </i><a href="auth.php">  Signout </a></button>
+      <i class="bx bx-log-out" style="font-size: 25px;">
+      </i><a href="auth.php" style="color: white; text-decoration: none;">  Signout </a></button>
   </header>
 
 <!-- Sidebar-->
@@ -97,18 +97,24 @@ function filterTable($query) {
 
     <div class="card">
       <form action="index.php" method="post">
-        <h5 style="margin: 5px;"> Search Documents </h5>
+        <header class="card-header">
+          <h1>Search Documents</h1>
+        </header>
 <!-- Add this inside your search form -->
 <input type="text" name="search" class="txt-bar" size="40px" placeholder="Enter file name...">   <br>
-<input type="submit" name="searchBtn" class="btn" value="Search">
+<input type="submit" name="searchBtn" class="search-btn" value="Search">
 
       </form>
     </div>
 
     <div class="card"> 
       <form action="index.php" method="post" enctype="multipart/form-data" >
-          <h5 style="margin: 5px;"> Import Documents (.docx/ .xlsx/ .pdf) </h5><br>
-          <input type="file" name="myfile"> 
+      <header class="card-header2">
+        <h1>Import Files</h1>
+        </header>
+        <!-- Add this inside your search form -->
+          <br><br><p1 class="h2" styles= "font-size: 8px;">Import documents, spreadsheets, portable document format(.docx/ .xlsx/ .pdf)</p2><br>
+          <input type="file" name="myfile" class="h2">
           <button type="submit" name="save" class="btn import-btn">Import</button>
         </form>
 
@@ -143,15 +149,10 @@ function filterTable($query) {
       </tr>
    <?php endwhile;?>
 </tbody>
-
           </table>
-      </div>
-      
+      </div> 
     </div>  
-    
   </main>
-  
   <footer>All rights reserved.&copy;</footer>
-
 </body>
 </html>
