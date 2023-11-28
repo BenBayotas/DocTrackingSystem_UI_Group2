@@ -1,6 +1,6 @@
 body {
   font-family: Montserrat;
-  min-height: 96vh;
+  max-height: 100%;
   display: grid;
   grid-template-columns: 150px 1fr;
   grid-template-rows: 50px 1fr;
@@ -9,9 +9,8 @@ body {
     "side main";
 }
 
-/*   HEADER  ELEMENTS */
 .header {
-  /*background-image: linear-gradient(to right, #4c70af , #3fdfff);*/
+
   background-color: rgb(44, 134, 202);
   grid-area: header;
   align-items: center;
@@ -21,12 +20,25 @@ body {
 }
 
 p {
-  color:white;
-  font-family: Montserrat,sans-serif;;
-  font-size: 27px;
+  color: white;
+  font-family: Montserrat, sans-serif;
+  font-size: 35px;
   text-align: left;
   margin-left: 13%;
   margin-bottom: 10px;
+  animation: colorAnimation 5s linear infinite;
+}
+
+@keyframes colorAnimation {
+  0% {
+    color: red;
+  }
+  50% {
+    color: yellow; 
+  }
+  100% {
+    color: 	green;
+  }
 }
 
 /* SIDE BAR ELEMENTS*/
@@ -433,25 +445,6 @@ p {
   display: flex;
   margin-top: 20px;
 }
-
-
-
-/*.card-header3 {
-  margin: -20px;
-  margin-top: 10px;
-  margin-right: 57%;
-  margin-bottom: 10px;
-  border-top-right-radius: 40px;
-  border-bottom-right-radius: 40px;
-  background-image: linear-gradient(to right, #4c70af , #3fdfff);
-  height: auto;
-  width: auto;
-  padding-top: 2%;
-  text-indent: 50px;
-  color: white;
-  font-size: 10px;
-}
-*/
 
 footer {
   font-size: 10px;
