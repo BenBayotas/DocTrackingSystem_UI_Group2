@@ -1,6 +1,7 @@
 body {
   font-family: Montserrat;
-  min-height: 96vh;
+  max-height: 100%;
+  overflow: hidden;
   display: grid;
   grid-template-columns: 150px 1fr;
   grid-template-rows: 50px 1fr;
@@ -9,9 +10,8 @@ body {
     "side main";
 }
 
-/*   HEADER  ELEMENTS */
 .header {
-  /*background-image: linear-gradient(to right, #4c70af , #3fdfff);*/
+
   background-color: rgb(44, 134, 202);
   grid-area: header;
   align-items: center;
@@ -21,12 +21,25 @@ body {
 }
 
 p {
-  color:white;
-  font-family: Montserrat,sans-serif;;
-  font-size: 27px;
+  color: white;
+  font-family: Montserrat, sans-serif;
+  font-size: 35px;
   text-align: left;
   margin-left: 13%;
   margin-bottom: 10px;
+  animation: colorAnimation 5s linear infinite;
+}
+
+@keyframes colorAnimation {
+  0% {
+    color: #00bda5;
+  }
+  50% {
+    color: #00d8bd; 
+  }
+  100% {
+    color: 	#00ffdf;
+  }
 }
 
 /* SIDE BAR ELEMENTS*/
@@ -41,7 +54,7 @@ p {
   transition: all 0.5s ease;
 }
 .sidebar.close{
-  width: 78px;
+  width: 87px;
 }
 .sidebar .logo-details{
   height: 90px;
@@ -56,6 +69,19 @@ p {
   min-width: 78px;
   text-align: center;
   line-height: 50px;
+  animation: colorAnimation 5s linear infinite;
+}
+
+@keyframes colorAnimation {
+  0% {
+    color: #00bda5;
+  }
+  50% {
+    color: #00d8bd; 
+  }
+  100% {
+    color: 	#00ffdf;
+  }
 }
 .sidebar .logo-details .logo_name{
   font-size: 22px;
@@ -63,6 +89,19 @@ p {
   font-weight: 600;
   transition: 0.3s ease;
   transition-delay: 0.1s;
+  animation: colorAnimation 5s linear infinite;
+}
+
+@keyframes colorAnimation {
+  0% {
+    color: #00bda5;
+  }
+  50% {
+    color: #00d8bd; 
+  }
+  100% {
+    color: 	#00ffdf;
+  }
 }
 .sidebar.close .logo-details .logo_name{
   transition-delay: 0s;
@@ -383,7 +422,7 @@ p {
 .card:nth-child(3) {
   grid-area: c5;
   width: 98.4%;
-  height: 90%;
+  height: 68%;
 }
 
 .txt-bar {
@@ -434,25 +473,6 @@ p {
   margin-top: 20px;
 }
 
-
-
-/*.card-header3 {
-  margin: -20px;
-  margin-top: 10px;
-  margin-right: 57%;
-  margin-bottom: 10px;
-  border-top-right-radius: 40px;
-  border-bottom-right-radius: 40px;
-  background-image: linear-gradient(to right, #4c70af , #3fdfff);
-  height: auto;
-  width: auto;
-  padding-top: 2%;
-  text-indent: 50px;
-  color: white;
-  font-size: 10px;
-}
-*/
-
 footer {
   font-size: 10px;
   height: 10px;
@@ -463,9 +483,8 @@ footer {
 /*TABLE ELEMENTS (DATABASE TABLE PLACEHOLDER)*/
 .table-wrapper {
   overflow-y: scroll;
-  overflow-x: scroll;
-  height: 100%;
-  max-height: 95%;
+  height: 72%;
+  max-height: 500px;
   margin-top: 10px;
   margin: 5px;
   padding-bottom: 5px;
@@ -487,7 +506,6 @@ footer {
 .table {
   width: 100%;
   margin-top: 10px;
-  overflow-x: auto;
   display: flex;
 
 }
