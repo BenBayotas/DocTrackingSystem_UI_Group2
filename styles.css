@@ -223,10 +223,10 @@ p {
   top: 50%;
   transform: translateY(-50%);
 }
-/*test this laterr*/
+
 .home-section{
   position: relative;
-  background: #E4E9F7;
+  background: transparent;
   height: 100vh;
   left: 260px;
   width: calc(100% - 260px);
@@ -299,10 +299,9 @@ p {
   font-size: 19px;
   background-color: transparent;
   color:#ffffff;
-  border-radius: 20px;
   cursor: pointer;
   border: 0;
-  transition: background-color 0.15s, color 0.15s, transform 0.15s;
+  transition: background-color 0.15s, color 0.15s;
   padding: 5px 20px;
 }
 
@@ -333,11 +332,25 @@ p {
   border: 0;
   transition: background-color 0.15s, color 0.15s, transform 0.15s;
   margin-top: 20px;
-  margin-left: 40px;
+  margin-left: 159px;
+}
+
+.delete-btn {
+  background-color: transparent;
+  color: rgb(114, 114, 123);
+  border-radius: 100px;
+  margin-left: -23px;
+  padding-top: 1px;
+}
+
+.update-btn {
+  background-color: transparent;
+  color: rgb(114, 114, 123);
+  border-radius: 100px;
 }
 
 .import-btn {
-  margin-left: 30px;
+  margin-left: 60px;
 }
 
 .btn:hover {
@@ -349,11 +362,12 @@ p {
   background-color: #75b4e1;
 }
 .delete-btn:hover{
-  background-color: rgb(235, 0, 0);
-  transform: scale(1.1, 1.1);
+  background-color: rgb(234, 46, 46);
+  color: white;
 }
 .update-btn:hover {
-  background-color:dodgerblue;
+  background-color:rgb(70, 155, 239);
+  color: white;
   transform: scale(1.1, 1.1);
 }
 .export-btn:hover {
@@ -371,7 +385,6 @@ p {
 .signout-btn:hover{
   background-color: rgb(100, 170, 255);
   color: white;
-  transform: scale(1.1, 1.1);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -386,7 +399,8 @@ p {
   cursor: pointer;
   border: 0;
   transition: background-color 0.15s, color 0.15s, transform 0.15s;
-  margin-top: 20px;
+  margin-top: 36px;
+  margin-left: 50px;
 }
 ::-webkit-file-upload-button:active {
   opacity: 0.7;
@@ -411,7 +425,7 @@ p {
   flex-direction: column;
   padding: 20px;
   gap: 5px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.30) 0px 5px 15px;
 }
 .card:nth-child(1) {
   grid-area: c1 / span 2;
@@ -430,8 +444,8 @@ p {
   margin-left: 40px;
   background-color: #ffffff;
   height: 35px;
-  width: 65%;
-  border: 2px solid #788c90;
+  width: 78%;
+  border: 2px solid #779096;
   border-radius: 15px;
   padding-left: 10px;
 }
@@ -488,7 +502,8 @@ footer {
   margin-top: 10px;
   margin: 5px;
   padding-bottom: 5px;
-  width: 100%;
+  width: 1198px;
+  margin-left: -20px;
 }
 .tablebg {
   background-color: #fff;
@@ -515,14 +530,13 @@ footer {
 }
 .table th {
   background-color: #ffffff;
-  border: 1px solid #ddd;
   text-align: center;
   padding: 8px;
   width: 10px;
 }
 
 .table td {
-  border: 2px solid #dddddd;
+  border-bottom: 1.5px solid #cbcbcb;
   text-align: center;
   padding: 5px;
 }
@@ -532,8 +546,9 @@ footer {
 .table tr th {
   background-color: rgb(44, 134, 202);
   color: white;
+  height: 30px;
 }
 .table tr:hover {
-  background-color: #ddd;
+  background-color: #dadada;
   transition: background-color 0.15s, color 0.15s;
 }

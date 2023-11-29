@@ -140,10 +140,10 @@ function filterTable($query) {
          <td><?php echo floor($file['size'] / 1000) . ' KB'; ?></td>
          <td><?php echo $file['downloads']; ?></td>
          <td style="width: 20%;" style="display: inline;">
-            <a class="tablebtn update-btn" href="index.php?file_id=<?php echo $file['id'] ?>">Download</a>
+         <a class="tablebtn update-btn" href="index.php?file_id=<?php echo $file['id'] ?>" style="text-decoration: none; font-size: 15px;"><i class="bx bx-download" style= "font-size: 18px; margin-top: 3px;"> Download</i></a>
             <form action="index.php" method="post">
                <input type="hidden" name="file_id" value="<?php echo $file['id']; ?>">
-               <input type="submit" name="delete" class="tablebtn delete-btn" value="Delete">
+               <button type="submit" name="delete" class="tablebtn delete-btn" value="Delete" style="font-size: 15px;"><i class= "bx bxs-trash-alt" style= "font-size: 18px; margin-top: 3px;"> Delete</i></button>
             </form>
          </td>
       </tr>
