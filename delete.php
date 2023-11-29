@@ -13,12 +13,12 @@ if (isset($_POST['delete'])) {
 
         // Execute the delete query
         if ($conn->query($deleteSql) === TRUE) {
-            echo "Successfully deleted the file.";
+            echo  '<script>alert("File has been Deleted")</script>';
         } else {
-            echo "Error deleting file: " . $conn->error;
+            echo '<script>alert("Error Deleting file")</script>' . $conn->error;
         }
     } else {
-        echo "No 'file_id' parameter provided for deletion.";
+        echo '<script>alert("File not found")</script>';
     }
 }
 ?>
