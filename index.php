@@ -129,6 +129,8 @@ function filterTable($query) {
                 <th>ID</th>
                 <th>File Name</th>
                 <th>File Size</th>
+                <th>Date</th>
+                <th>Time</th>
                 <th>Downloads</th>
                 <th>Action</th>
             </thead>
@@ -138,6 +140,8 @@ function filterTable($query) {
          <td><?php echo $file['id']; ?></td>
          <td><?php echo $file['name']; ?></td>
          <td><?php echo floor($file['size'] / 1000) . ' KB'; ?></td>
+         <td><?php echo $file['date']; ?></td>
+         <td><?php echo $file['time']; ?></td>
          <td><?php echo $file['downloads']; ?></td>
          <td style="width: 20%;" style="display: inline;">
          <a class="tablebtn update-btn" href="index.php?file_id=<?php echo $file['id'] ?>" style="text-decoration: none; font-size: 15px;"><i class="bx bx-download" style= "font-size: 18px; margin-top: 3px;"> Download</i></a>
