@@ -1,5 +1,5 @@
 <?php
-// connect to the database
+// conn to DB
 $conn = mysqli_connect('localhost', 'root', '', 'dts');
 
 $sql = "SELECT * FROM files";
@@ -7,7 +7,7 @@ $result = mysqli_query($conn, $sql);
 
 $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-// Uploads files
+// Upload
 if (isset($_POST['save'])) { // if save button on the form is clicked
     // name of the uploaded file
     $filename = $_FILES['myfile']['name'];
@@ -37,11 +37,9 @@ if (isset($_POST['save'])) { // if save button on the form is clicked
             echo "Failed to upload file.";
         }
     }
-
-    
 }
 
-// Downloads files
+// Download
 if (isset($_GET['file_id'])) {
     $id = $_GET['file_id'];
 
@@ -66,9 +64,7 @@ if (isset($_GET['file_id'])) {
         $newCount = $file['downloads'] + 1;
         $updateQuery = "UPDATE files SET downloads=$newCount WHERE id=$id";
         mysqli_query($conn, $updateQuery);
-        exit;
-        
+        exit;  
     }
-    
 }
 ?>

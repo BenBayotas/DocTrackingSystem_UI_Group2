@@ -58,6 +58,6 @@
       <div class="one"></div>
       <script src="script.js"></script>
     <main class="main"> </main>
-    <footer class="footer"></footer>
+    <footer>All rights reserved.&copy;</footer>
 </body>
 </html>

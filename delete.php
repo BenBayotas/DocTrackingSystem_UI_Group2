@@ -1,17 +1,14 @@
 <?php
-// Your existing code...
-
-// Check if the 'delete' button is clicked
 if (isset($_POST['delete'])) {
-    // Check if the 'file_id' parameter is set in the POST request
+    // Check if 'file_id' params is set in POST req
     if (isset($_POST['file_id'])) {
         // Get and sanitize the 'file_id' parameter
         $fileId = mysqli_real_escape_string($conn, $_POST['file_id']);
 
-        // SQL to delete the file record
+        // SQL to delete file
         $deleteSql = "DELETE FROM files WHERE id = '{$fileId}'";
 
-        // Execute the delete query
+        // Exec delete query
         if ($conn->query($deleteSql) === TRUE) {
             echo  '<script>alert("File has been Deleted")</script>';
         } else {

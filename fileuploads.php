@@ -60,5 +60,6 @@
     <script src="script.js"></script>
     
     <main class="main"> </main>
+<footer>All rights reserved.&copy;</footer>
 </body>
 </html>

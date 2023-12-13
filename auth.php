@@ -1,9 +1,7 @@
 <?php 
 	include_once("register.php");
 	include_once("login.php");
-	
-	?>
-
+?>
 
 <!DOCTYPE html>
 <html>
@@ -20,10 +18,7 @@
 					<input class="input" type="text" name="logname" placeholder="Username" required="">
 					<input class="input" type="password" name="logpword" placeholder="Password" required="">
 					<button type="submit" class="login-btn" name="login">Log In</a></button>
-					<button  class="login-btn"><a href="authAdmin.php"style="color: white; text-decoration: none;">Admin Log In</a></button>
-
-
-					
+					<button  class="login-btn"><a href="authAdmin.php"style="color: white; text-decoration: none;">Admin Log In</a></button>			
 				</form>
 			</div>
 
@@ -39,5 +34,3 @@
 	</div>
 </body>
 </html>
-
-

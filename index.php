@@ -158,6 +158,5 @@ function filterTable($query) {
     </div>  
   </main>
   <footer>All rights reserved.&copy;</footer>
-
 </body>
 </html>

@@ -8,7 +8,6 @@
 		$email = filter_input(INPUT_POST,"email", FILTER_SANITIZE_SPECIAL_CHARS);
 		$password = filter_input(INPUT_POST,"password", FILTER_SANITIZE_SPECIAL_CHARS);
 
-
 		try {
 			if(empty($username) && empty($email) && empty($password)) {
 			
@@ -26,12 +25,7 @@
 			}
 		} catch(mysqli_sql_exception){
 				echo '<script> alert("User Already Exist")</script>';
-		}
-			
+		}		
 	} 
-
-	
-
-
 	mysqli_close($conn);
 ?>

@@ -2,7 +2,7 @@
 include 'filesLogic.php';
 include 'delete.php';
 
-// Check if the search form is submitted
+// Check if search form is submitted
 if (isset($_GET['searchBtn'])) {
     $searchTerm = $_GET['search'];
 
@@ -12,9 +12,4 @@ if (isset($_GET['searchBtn'])) {
     // If the search form is not submitted, fetch all files as usual
     $files = getFiles();
 }
-
-// Your existing code for displaying files goes here
 ?>
-
-<!-- Your existing HTML code continues... -->
-

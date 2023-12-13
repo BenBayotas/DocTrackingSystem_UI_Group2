@@ -1,20 +1,15 @@
 <?php
-
-// Database connection parameters
+// DB conn params
 $hostname = 'localhost';
 $username = 'root';
 $password = '';
 $database = 'dts';
 
-// Attempt to establish a connection
+// Establish conn
 $conn = new mysqli($hostname, $username, $password, $database);
 
-// Check the connection
+// Check conn
 if ($conn->connect_error) {
     die('Connection failed: ' . $conn->connect_error);
 }
-
-// If you reached this point, the connection is successful
-// You can perform database operations using $conn
-
 ?>

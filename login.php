@@ -5,7 +5,6 @@
     $username = $_POST['logname'];
     $password = $_POST['logpword'];
     
-    
     $select = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
     $result = $conn->query($select);
 
@@ -15,10 +14,5 @@
     echo '<script>alert("Invalid Username or Password") </script>';
     header("Location: auth.php");
    }
-   
-  
   }
-
-  
-
 ?>

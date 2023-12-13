@@ -1,3 +1,24 @@
+<?php 
+//Admin Login Credentials
+	if(isset($_POST['admin-login']))
+	{
+		if(!empty($_POST['admin_name']) && !empty($_POST['admin_pswd'])){
+			
+			$admin_name = $_POST['admin_name'];
+			$admin_pswd = $_POST['admin_pswd'];
+
+			if($admin_name == "admin" && $admin_pswd == "dtsadmin123")
+			{
+				header("Location: index.php");
+			}
+			else 
+			{
+				header("Location: auth.php");
+			}
+		}
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,30 +39,3 @@
 	</div>
 </body>
 </html>
-
-<?php 
-
-//Admin Login Credentials
-	if(isset($_POST['admin-login']))
-	{
-		
-		if(!empty($_POST['admin_name']) && !empty($_POST['admin_pswd'])){
-			
-			$admin_name = $_POST['admin_name'];
-			$admin_pswd = $_POST['admin_pswd'];
-
-			if($admin_name == "admin" && $admin_pswd == "dtsadmin123")
-			{
-				header("Location: index.php");
-			}
-			else 
-			{
-				header("Location: auth.php");
-			}
-		}
-
-
-	}
-
-
-?>
