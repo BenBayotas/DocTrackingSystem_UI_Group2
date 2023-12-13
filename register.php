@@ -20,7 +20,7 @@
 				mysqli_query($conn, $sql);
 				echo 	'<script>alert("You are now Registered!") </script>';
 	
-				header("Location: http://localhost/git_backups2/auth.php");
+				header("Location: auth.php");
 				exit;	
 			}
 		} catch(mysqli_sql_exception){
